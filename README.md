@@ -15,8 +15,11 @@ An interactive CLI with arrow-key navigation to browse:
 - **About Me** — Bio, highlights, and quick stats
 - **Skills** — AI/ML, tools, platforms, and leadership competencies
 - **Experience** — Full career timeline from CPB to i-Genie.ai
+- **Projects** — Open source builds, from LLM eval frameworks to price trackers
+- **Apps** — Native iOS apps live on the App Store
 - **Education** — Degrees from Utrecht University, UCR, and more
 - **Awards** — LinkedIn Top Voice in AI, OpenAI Token of Appreciation, 8+ industry awards
+- **Bookshelf** — 22 books that shaped my thinking
 - **Contact** — Email, LinkedIn, and GitHub links
 
 ## Features

@@ -1,22 +1,43 @@
 {
   "name": "linda-hoeberigs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Terminal portfolio for Linda Hoeberigs — Head of Data Science & AI",
   "main": "index.js",
   "bin": {
-    "linda-hoeberigs": "./index.js"
+    "linda-hoeberigs": "index.js"
   },
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["cli", "portfolio", "resume", "terminal", "ai", "data-science"],
+  "keywords": [
+    "cli",
+    "portfolio",
+    "resume",
+    "terminal",
+    "ai",
+    "data-science"
+  ],
   "author": "Linda Hoeberigs <l.hoeberigs+site@gmail.com>",
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "chalk": "^5.3.0",
-    "inquirer": "^9.2.0",
     "boxen": "^7.1.0",
-    "gradient-string": "^2.0.2"
-  }
+    "chalk": "^5.3.0",
+    "gradient-string": "^2.0.2",
+    "inquirer": "^9.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoeberigs/linda-hoeberigs-cli.git"
+  },
+  "homepage": "https://lindahoeberigs.com",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "index.js",
+    "data.js",
+    "README.md",
+    "LICENSE"
+  ]
 }

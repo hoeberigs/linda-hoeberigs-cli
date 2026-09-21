@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import boxen from 'boxen';
 import gradient from 'gradient-string';
-import { profile, skills, experience, education, awards, highlights } from './data.js';
+import { profile, skills, experience, education, awards, highlights, projects, apps, books } from './data.js';
 
 // ===== Theme =====
 const purple = chalk.hex('#6b5ce7');
@@ -34,7 +34,8 @@ function printHeader() {
     `${warm(profile.tagline)}\n\n` +
     `${dim('Email')}     ${profile.email}\n` +
     `${dim('LinkedIn')}  ${purpleLight(profile.linkedin)}\n` +
-    `${dim('GitHub')}    ${purpleLight(profile.github)}`,
+    `${dim('GitHub')}    ${purpleLight(profile.github)}\n` +
+    `${dim('Website')}   ${purpleLight(profile.website)}`,
     {
       padding: 1,
       margin: { top: 0, bottom: 1, left: 2, right: 2 },
@@ -140,7 +141,8 @@ function showContact() {
     `${bold("Let's connect!")}\n\n` +
     `${dim('Email')}     ${profile.email}\n` +
     `${dim('LinkedIn')}  ${purpleLight(profile.linkedin)}\n` +
-    `${dim('GitHub')}    ${purpleLight(profile.github)}\n\n` +
+    `${dim('GitHub')}    ${purpleLight(profile.github)}\n` +
+    `${dim('Website')}   ${purpleLight(profile.website)}\n\n` +
     `${dim(profile.location)}`,
     {
       padding: 1,
@@ -154,14 +156,55 @@ function showContact() {
   console.log();
 }
 
+function showProjects() {
+  console.log();
+  console.log(purple(bold('  ── Open Source Projects ──')));
+  console.log();
+
+  for (const project of projects) {
+    console.log(`  ${bold(project.name)}`);
+    console.log(`  ${dim(project.description)}`);
+    console.log(`  ${teal(project.tech.join(' · '))}`);
+    console.log();
+  }
+}
+
+function showApps() {
+  console.log();
+  console.log(purple(bold('  ── iOS Apps (App Store) ──')));
+  console.log();
+
+  for (const app of apps) {
+    console.log(`  ${bold(app.name)}`);
+    console.log(`  ${dim(app.description)}`);
+    console.log(`  ${teal(app.tech.join(' · '))}`);
+    console.log();
+  }
+}
+
+function showBooks() {
+  console.log();
+  console.log(purple(bold('  ── Bookshelf ──')));
+  console.log();
+
+  for (const book of books) {
+    const year = book.year ? dim(` (${book.year})`) : '';
+    console.log(`  ${teal('▸')} ${bold(book.title)} ${dim('· ' + book.author)}${year}`);
+  }
+  console.log();
+}
+
 // ===== Menu =====
 
 const MENU_CHOICES = [
   { name: `${purple('❯')} About Me         ${dim('— Bio & highlights')}`, value: 'about' },
   { name: `${purple('❯')} Skills            ${dim('— Technical & leadership')}`, value: 'skills' },
   { name: `${purple('❯')} Experience        ${dim('— Career timeline')}`, value: 'experience' },
+  { name: `${purple('❯')} Projects          ${dim('— Open source builds')}`, value: 'projects' },
+  { name: `${purple('❯')} Apps              ${dim('— iOS apps on the App Store')}`, value: 'apps' },
   { name: `${purple('❯')} Education         ${dim('— Degrees & certifications')}`, value: 'education' },
   { name: `${purple('❯')} Awards            ${dim('— Recognition & honours')}`, value: 'awards' },
+  { name: `${purple('❯')} Bookshelf         ${dim('— Books that shaped my thinking')}`, value: 'books' },
   { name: `${purple('❯')} Contact           ${dim('— Get in touch')}`, value: 'contact' },
   new inquirer.Separator(dim('  ─────────────────────────────────')),
   { name: `${dim('  Exit')}`, value: 'exit' },
@@ -171,6 +214,9 @@ const SECTION_MAP = {
   about: showAbout,
   skills: showSkills,
   experience: showExperience,
+  projects: showProjects,
+  apps: showApps,
+  books: showBooks,
   education: showEducation,
   awards: showAwards,
   contact: showContact,
@@ -183,7 +229,7 @@ async function mainMenu() {
       name: 'section',
       message: purple('What would you like to know?'),
       choices: MENU_CHOICES,
-      pageSize: 10,
+      pageSize: 12,
     }
   ]);
 
