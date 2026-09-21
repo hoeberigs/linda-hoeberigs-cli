@@ -1,13 +1,14 @@
 {
   "name": "linda-hoeberigs",
-  "version": "1.1.0",
-  "description": "Terminal portfolio for Linda Hoeberigs — Head of Data Science & AI",
+  "version": "1.2.0",
+  "description": "Terminal portfolio for Linda Hoeberigs, Head of Data Science & AI. Run it with npx linda-hoeberigs.",
   "main": "index.js",
   "bin": {
     "linda-hoeberigs": "index.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node --test"
   },
   "keywords": [
     "cli",
