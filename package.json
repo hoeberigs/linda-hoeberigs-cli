@@ -1,6 +1,6 @@
 {
   "name": "linda-hoeberigs",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Terminal portfolio for Linda Hoeberigs, Head of Data Science & AI. Run it with npx linda-hoeberigs.",
   "main": "index.js",
   "bin": {

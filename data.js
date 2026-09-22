@@ -8,7 +8,7 @@ export const profile = {
   github: 'https://github.com/hoeberigs',
   website: 'https://lindahoeberigs.com',
   tagline: 'Scaling AI from strategy to shipped product.',
-  lede: 'I lead teams that turn generative AI, NLP and machine learning into measurable business outcomes.',
+  lede: 'I lead teams that turn LLMs, agentic workflows and machine learning into measurable business outcomes.',
   bio: `I'm a data science and AI leader with over a decade of experience driving AI strategy, building high-performing teams, and shipping products that move the needle.
 
 At i-Genie.ai (consumer insights without surveys, faster, better, cheaper) I lead Data Science & AI, define the early product roadmap, and took Brand Pulse, ACQ and Innov8 from zero to market. Under my leadership, i-Genie became one of OpenAI's top API consumers globally (10B+ tokens).
