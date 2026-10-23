@@ -1,18 +1,18 @@
 {
   "name": "linda-hoeberigs",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
       "name": "linda-hoeberigs",
-      "version": "1.2.0",
+      "version": "1.2.2",
       "license": "MIT",
       "dependencies": {
-        "boxen": "^7.1.0",
-        "chalk": "^5.3.0",
-        "gradient-string": "^2.0.2",
-        "inquirer": "^9.2.0"
+        "boxen": "7.1.1",
+        "chalk": "5.6.2",
+        "gradient-string": "2.0.2",
+        "inquirer": "9.3.8"
       },
       "bin": {
         "linda-hoeberigs": "index.js"
